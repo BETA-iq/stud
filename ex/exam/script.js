@@ -41,11 +41,11 @@ async function loadDatabaseFile(userData){
   const subject = urlParams.get("subject");
   const period = urlParams.get("period");
 
-  const filePath = `../database/${className}/${subject}/${period}.json`;
+  const filePath = `https://edu.karbala.cc/ex/database/${className}/${subject}/${period}.json`;
 
   try {
     const response = await fetch(filePath);
-    
+
     if (!response.ok) {
       throw new Error("File not found");
     }
@@ -60,8 +60,8 @@ async function loadDatabaseFile(userData){
     document.body.innerHTML =
       "<h2 style='color:red;text-align:center;margin-top:50px;'>⚠ الملف غير موجود</h2>";
   }
-
 }
+
 
 function pickRandom(arr, n){
   const copy = arr.slice();
@@ -334,3 +334,4 @@ backBtn.addEventListener("click", () => {
   window.history.back();
 });
 prepareExam();
+
