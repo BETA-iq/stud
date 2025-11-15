@@ -1,0 +1,2 @@
+AddType application/json .json
+Header set Access-Control-Allow-Origin "*"
