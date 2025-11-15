@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>الاختبار — منصة الأمثلة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="exam-wrap">
+    <header class="exam-header">
+      <button id="backBtn" class="ghost">رجوع</button>
+      <h1 id="examTitle">جاري التحضير...</h1>
+      <div id="meta" class="meta"></div>
+    </header>
+
+    <main class="exam-main">
+      <div id="loader" class="loader">تحميل الأسئلة...</div>
+
+      <div id="quizArea" class="quiz-area hidden">
+        <div class="progress-row">
+          <div id="progressText">السؤال 0 / 0</div>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <section id="questionCard" class="question-card">
+          <!-- محتوى السؤال يُحقن هنا -->
+        </section>
+
+        <div class="controls">
+          <button id="prevQ" class="ghost">السابق</button>
+          <button id="nextQ" class="primary">تحقق</button>
+        </div>
+      </div>
+
+      <div id="resultArea" class="result-area hidden">
+        <h2 id="resultTitle"></h2>
+        <p id="resultSummary"></p>
+        <div id="retryWrap" class="retry-wrap"></div>
+        <button id="finishBtn" class="primary">إنهاء</button>
+      </div>
+    </main>
+
+    <footer class="exam-footer">
+      <div class="note">واجهة متوافقة مع الهاتف والكمبيوتر · تفاعلية وانيميشن</div>
+    </footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

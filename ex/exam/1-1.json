@@ -1,0 +1,197 @@
+[
+  {
+    "type":"mcq",
+    "question":"The capital of France is ____.",
+    "choices": ["London","Paris","Berlin","Rome"],
+    "answer": "Paris",
+    "explain":"Paris is the capital city of France."
+  },
+  {
+    "type":"mcq",
+    "question":"Which planet is known as the Red Planet?",
+    "choices": ["Earth","Mars","Jupiter","Venus"],
+    "answer": "Mars",
+    "explain":"Mars appears red due to iron oxide on its surface."
+  },
+  {
+    "type":"mcq",
+    "question":"What is the largest ocean on Earth?",
+    "choices": ["Atlantic","Indian","Pacific","Arctic"],
+    "answer": "Pacific",
+    "explain":"The Pacific Ocean is the largest and deepest ocean."
+  },
+  {
+    "type":"mcq",
+    "question":"Who discovered gravity?",
+    "choices": ["Newton","Einstein","Tesla","Edison"],
+    "answer": "Newton",
+    "explain":"Isaac Newton proposed the law of universal gravity."
+  },
+  {
+    "type":"mcq",
+    "question":"The process of plants making food is called ____.",
+    "choices": ["Respiration","Digestion","Photosynthesis","Fermentation"],
+    "answer": "Photosynthesis",
+    "explain":"Plants make food using sunlight through photosynthesis."
+  },
+
+  {
+    "type":"fill",
+    "question":"اكمل الجملة: الماء يغلي عند درجة _____.",
+    "answer": "100",
+    "explain":"يغلي الماء عند 100 درجة مئوية في الظروف القياسية."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: أطول نهر في العالم هو نهر _____.",
+    "answer": "النيل",
+    "explain":"نهر النيل يُعد أطول نهر في العالم."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: قلب الإنسان يقع في الجهة ____ من الصدر.",
+    "answer": "اليسرى",
+    "explain":"القلب يميل قليلاً إلى الجهة اليسرى."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: عدد أيام الأسبوع هو _____.",
+    "answer": "7",
+    "explain":"أيام الأسبوع سبعة."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: الجهاز المسؤول عن التنفس هو الجهاز _____.",
+    "answer": "التنفسي",
+    "explain":"الجهاز التنفسي مسؤول عن دخول الهواء إلى الجسم."
+  },
+
+  {
+    "type":"truefalse",
+    "question":"الشمس أكبر من الأرض.",
+    "answer": "true",
+    "explain":"الشمس أكبر من الأرض بحوالي مليون مرة."
+  },
+  {
+    "type":"truefalse",
+    "question":"الصوت ينتقل أسرع في الهواء من الماء.",
+    "answer": "false",
+    "explain":"الصوت ينتقل أسرع في الماء من الهواء."
+  },
+  {
+    "type":"truefalse",
+    "question":"القمر يعكس ضوء الشمس.",
+    "answer": "true",
+    "explain":"القمر لا يملك ضوءاً ذاتياً بل يعكس ضوء الشمس."
+  },
+  {
+    "type":"truefalse",
+    "question":"عدد قارات العالم هو 5 قارات.",
+    "answer": "false",
+    "explain":"عدد القارات المتفق عليه هو 7 قارات."
+  },
+  {
+    "type":"truefalse",
+    "question":"الجاذبية هي القوة التي تجذب الأشياء نحو الأرض.",
+    "answer": "true",
+    "explain":"هذه هي طبيعة الجاذبية."
+  },
+
+  {
+    "type":"definition",
+    "question":"عرف الذرة باختصار.",
+    "answer": "أصغر جزء من المادة يحتفظ بخواصها",
+    "explain":"الذرة هي وحدة بناء المادة."
+  },
+  {
+    "type":"definition",
+    "question":"ما هو التنفس؟",
+    "answer": "عملية دخول الأكسجين وخروج ثاني أكسيد الكربون",
+    "explain":"التنفس يوفر الأكسجين الضروري للخلايا."
+  },
+  {
+    "type":"definition",
+    "question":"عرف القارة.",
+    "answer": "كتلة أرضية كبيرة تضم عدة دول",
+    "explain":"القارة جزء كبير من اليابسة."
+  },
+  {
+    "type":"definition",
+    "question":"ما هو الجهاز العصبي؟",
+    "answer": "جهاز يتحكم في حركة الجسم واستجابته",
+    "explain":"يشمل الدماغ والأعصاب."
+  },
+  {
+    "type":"definition",
+    "question":"عرف الحرارة.",
+    "answer": "شكل من أشكال الطاقة ينتقل من جسم لآخر",
+    "explain":"الحرارة تنتقل من الساخن إلى البارد."
+  },
+
+  {
+    "type":"mcq",
+    "question":"What is the closest star to Earth?",
+    "choices": ["Alpha Centauri","Sirius","The Sun","Vega"],
+    "answer": "The Sun",
+    "explain":"The Sun is the closest star to Earth."
+  },
+  {
+    "type":"mcq",
+    "question":"How many continents are there?",
+    "choices": ["5","6","7","8"],
+    "answer": "7",
+    "explain":"Earth has 7 continents."
+  },
+  {
+    "type":"mcq",
+    "question":"Which gas do humans need to breathe?",
+    "choices": ["CO2","Oxygen","Nitrogen","Helium"],
+    "answer": "Oxygen",
+    "explain":"Humans need oxygen to survive."
+  },
+  {
+    "type":"mcq",
+    "question":"Which is the fastest animal on land?",
+    "choices": ["Lion","Cheetah","Horse","Wolf"],
+    "answer": "Cheetah",
+    "explain":"The cheetah is the fastest land animal."
+  },
+  {
+    "type":"mcq",
+    "question":"Earth is the ____ planet from the Sun.",
+    "choices": ["1st","2nd","3rd","4th"],
+    "answer": "3rd",
+    "explain":"Earth is the third planet in the solar system."
+  },
+
+  {
+    "type":"fill",
+    "question":"اكمل: يشكل الماء حوالي ____٪ من جسم الإنسان.",
+    "answer": "70",
+    "explain":"نسبة الماء في جسم الإنسان تقارب 70٪."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: أكبر قارة في العالم هي قارة _____.",
+    "answer": "آسيا",
+    "explain":"آسيا هي أكبر القارات مساحة."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: تقع مصر في قارة _____.",
+    "answer": "أفريقيا",
+    "explain":"مصر دولة في شمال أفريقيا."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: أكبر حيوان على وجه الأرض هو _____.",
+    "answer": "الحوت الأزرق",
+    "explain":"الحوت الأزرق هو الأضخم حجماً."
+  },
+  {
+    "type":"fill",
+    "question":"اكمل: يتحول الماء إلى ثلج عند درجة _____.",
+    "answer": "0",
+    "explain":"يتجمد الماء عند 0° مئوية."
+  }
+]
