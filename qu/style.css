@@ -1,0 +1,172 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0b1020, #1c1c3c, #0b1020, #1c1c3c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: linear-gradient(145deg, rgba(31,31,63,0.95), rgba(17,17,42,0.95));
+  padding: 35px 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 60px rgba(0, 255, 200, 0.25);
+  width: 90%;
+  max-width: 720px;
+  animation: fadeIn 1s ease forwards;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0,255,200,0.2);
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #00b8b8;
+  font-size: 2rem;
+  text-shadow: -2px 0px 19px #00fff0;
+  animation: slideDown 0.8s ease forwards;
+}
+
+.selectors select {
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border-radius: 45px;
+  border: none;
+  background: rgba(17,17,42,0.9);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,255,200,0.2);
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  text-align: center;
+}
+
+.selectors select:hover {
+  background: rgba(15,15,37,0.95);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0,255,200,0.4);
+}
+
+.selectors select:focus {
+  outline: none;
+  box-shadow: 0 0 25px #00fff0;
+  background: rgba(10,10,30,0.95);
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+.selectors option {
+  background-color: #11112a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.selectors option:hover {
+  background-color: teal;
+  color: #000;
+}
+
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  margin: 15px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 255, 200, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 50px rgba(0, 255, 200, 0.6);
+}
+
+#imageDetails {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #00fff0;
+  text-shadow: 0 0 10px rgba(0,255,255,0.5);
+  animation: fadeInText 0.8s ease forwards;
+}
+
+button {
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 15px;
+  background: teal;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,255,200,0.3);
+}
+
+button:hover {
+  background: #00b8b8;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,255,200,0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 768px) {
+  .selectors select {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .image-wrapper img {
+    max-width: 90%;
+  }
+}
