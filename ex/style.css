@@ -50,6 +50,8 @@ h1 {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+  text-align: center;
+
 }
 
 button {
@@ -67,3 +69,4 @@ button {
 button:hover {
   transform: scale(1.08);
 }
+
