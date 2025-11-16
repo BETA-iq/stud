@@ -14,6 +14,7 @@ const retryWrap = document.getElementById("retryWrap");
 const finishBtn = document.getElementById("finishBtn");
 const backBtn = document.getElementById("backBtn");
 
+
 let state = {
   allQuestions: [],
   examList: [],
@@ -34,33 +35,18 @@ function getExFromUrl(){
     return null;
   }
 }
-async function loadDatabaseFile(userData){
-  const urlParams = new URLSearchParams(window.location.search);
-
-  const className = urlParams.get("class");
-  const subject = urlParams.get("subject");
-  const period = urlParams.get("period");
-
-  const filePath = `https://edu.karbala.cc/ex/database/${className}/${subject}/${period}.json`;
-
+function loadDatabaseFile(userData){
   try {
-    const response = await fetch(filePath);
-
-    if (!response.ok) {
-      throw new Error("File not found");
-    }
-
-    const data = await response.json();
-    console.log("Questions Loaded:", data);
-
-    startExam(data);
-
-  } catch (e) {
+    const data = database[userData.class][userData.subject][userData.period];
+    if(!data || !data.length) throw new Error("No questions");
+    return data;
+  } catch(e){
     console.error(e);
-    document.body.innerHTML =
-      "<h2 style='color:red;text-align:center;margin-top:50px;'>⚠ الملف غير موجود</h2>";
+    document.body.innerHTML = "<h2 style='color:red;text-align:center;margin-top:50px;'>⚠ الملف غير موجود</h2>";
+    return [];
   }
 }
+
 
 
 function pickRandom(arr, n){
@@ -114,19 +100,20 @@ function renderQuestion(){
   const inputs = document.createElement("div");
   inputs.className = "choices";
   const type = qObj.type || "mcq";
-  if(type === "mcq"){
-    (qObj.choices || []).forEach((ch, i) => {
-      const btn = document.createElement("button");
-      btn.className = "choice-btn";
-      btn.innerText = ch;
-      btn.addEventListener("click", () => {
-        Array.from(inputs.children).forEach(el => el.classList.remove("selected"));
-        btn.classList.add("selected");
-        state.answers[state.index] = { qid: state.index, given: ch, correct: qObj.answer };
-      });
-      inputs.appendChild(btn);
+if(type === "mcq"){
+  const shuffledChoices = pickRandom(qObj.choices || [], (qObj.choices || []).length);
+  shuffledChoices.forEach((ch, i) => {
+    const btn = document.createElement("button");
+    btn.className = "choice-btn";
+    btn.innerText = ch;
+    btn.addEventListener("click", () => {
+      Array.from(inputs.children).forEach(el => el.classList.remove("selected"));
+      btn.classList.add("selected");
+      state.answers[state.index] = { qid: state.index, given: ch, correct: qObj.answer };
     });
-  } else if(type === "truefalse"){
+    inputs.appendChild(btn);
+  });
+} else if(type === "truefalse"){
     ["صح","خطأ"].forEach(val => {
       const btn = document.createElement("button");
       btn.className = "choice-btn";
@@ -290,12 +277,7 @@ function finalizeRound(){
   const finalTotal = state.examList.length + (state.reaskRound ? 0 : 0); 
   let overallPercent = percent;
   if(state.reaskRound){
-    // Combine previous correct from initial round + correct from reask round.
-    // For simplicity: إذا كانت إعادة تمت، سنعرض نتيجة من نسبة الأسئلة الصحيحة من مجموع الأسئلة الأصلية.
-    // للحصول على هذه القيمة، يجب أن نحتفظ بنتائج الجولة الأولى.
-    // (لكن لأننا أعدنا state.answers، سنستخرج من مكان سابق ما إذا أردنا تعقيد)
-    // هنا نبقي عرضًا بسيطًا:
-    overallPercent = percent; // تقريبي
+    overallPercent = percent;
   }
 
   showResult(percent, total, correctCount);
@@ -334,4 +316,3 @@ backBtn.addEventListener("click", () => {
   window.history.back();
 });
 prepareExam();
-
