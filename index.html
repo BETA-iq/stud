@@ -1,0 +1,460 @@
+<html lang="ar" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>منصة الأمثلة والامتحانات — القالب الأساسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+  
+  <style>
+    /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+:root {
+  --bg: #0b1020;
+  --card-bg: linear-gradient(180deg,#1a1f3c,#0b1020);
+  --accent: #00d0c0;
+  --btn-primary: #148f79;
+  --btn-hover: #00d0c0;
+  --text-color: #fff;
+  --radius: 12px;
+  --shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
+
+body {
+  background: var(--bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a { text-decoration:none; color: inherit; }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--card-bg);
+  padding: 15px 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top:0;
+  z-index: 1000;
+}
+.site-header .brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--btn-primary);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-list {
+  display: flex;
+  list-style:none;
+  gap: 20px;
+}
+.nav-list li a {
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+.nav-list li a:hover {
+  background: var(--accent);
+  color: #001;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--btn-primary);
+  margin-bottom: 15px;
+}
+.hero-text p {
+  margin-bottom: 25px;
+}
+.hero-actions .btn {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn.primary {
+  background: var(--btn-primary);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--btn-hover);
+  color: #001;
+}
+.btn.outline {
+  border: 2px solid var(--btn-primary);
+  color: var(--btn-primary);
+}
+.btn.outline:hover {
+  background: var(--btn-primary);
+  color: #001;
+}
+
+/* Teacher Card */
+.hero-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.teacher-card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.teacher-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.teacher-info h3 { color: var(--accent); margin-bottom:5px;}
+.teacher-info p { font-size: 0.85rem; }
+.teacher-actions .icon-btn {
+  background: rgba(255,255,255,0.05);
+  border:none;
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  cursor:pointer;
+  margin-right:5px;
+  transition: all 0.3s;
+}
+.teacher-actions .icon-btn:hover {
+  background: var(--btn-primary);
+  color: #001;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.stats div {
+  text-align: center;
+}
+.stats strong { font-size: 1.2rem; color: var(--accent); }
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--btn-primary);
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.example-card {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.example-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,208,192,0.3);
+}
+
+.btn::before {
+  content:"";
+  position: absolute;
+  top:-50%; left:-50%;
+  width:200%; height:200%;
+  background: rgba(255,255,255,0.05);
+  transform: rotate(45deg);
+  transition: all .5s;
+}
+.btn:hover::before { transform: rotate(0deg); }
+
+.pager {
+  margin-top: 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10px;
+}
+.pager button {
+  background: var(--btn-primary);
+  border:none;
+  color:#fff;
+  padding:8px 15px;
+  border-radius: var(--radius);
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.pager button:hover {
+  background: var(--accent);
+  color:#001;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+.form-row label {
+  display:block;
+  margin-bottom:5px;
+}
+.form-row select, .form-row input {
+  width:100%;
+  padding:10px;
+  border-radius: var(--radius);
+  border:none;
+  outline:none;
+  background: rgba(255,255,255,0.05);
+  color:#fff;
+}
+.exam-area {
+  margin-top:20px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.site-footer {
+  margin-top: 50px;
+  padding:20px 0;
+  text-align:center;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+.site-footer a {
+  color: var(--accent);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+.site-footer a:hover { color: var(--btn-primary); }
+.hidden { display:none; }
+
+@media(max-width:900px){
+  .hero-grid { grid-template-columns:1fr; text-align:center;}
+  .teacher-card { justify-content:center;}
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="#">منصتي</a>
+        <ul class="nav-list">
+          <li><a href="https://edu.karbala.cc/qu">أمثلة الأسئلة</a></li>
+          <li><a href="https://edu.karbala.cc/ex">الامتحانات</a></li>
+          <li><a href="#about">عن المنصة</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>تعلم بذكاء — اختبر قدراتك</h1>
+          <p>شاهد أمثلة أسئلة شهرية أو اختبر نفسك بامتحان تفاعلي. القالب قابل للتعديل وإضافة المناهج والأسئلة من ملفات JSON بسهولة.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://edu.karbala.cc/qu">امثلة اسئله</a>
+            <a class="btn outline" href="https://edu.karbala.cc/ex">ابدأ امتحان</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="teacher-card">
+            <img src="https://idrees.cv/bg/ava_first.jpg" alt="صورتي">
+            <div class="teacher-info">
+              <h3>تواصل معنا</h3>
+              <p class="small">ي</p>
+            </div>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>120</strong>
+              <span>نموذج</span>
+            </div>
+            <div>
+              <strong>50+</strong>
+              <span>سؤال/مادة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <section id="about" class="about container">
+      <h2 class="section-title">عن المنصة</h2>
+      <p>قالب مبدئي لواجهة الأمثلة والامتحانات — يمكنك تعديل المحتوى وإضافة ملفات JSON للمناهج والأسئلة. التصميم يدعم RTL واللغة العربية.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 منصتي — كل الحقوق محفوظة</p>
+      <div class="footer-links">
+        <a href="#">شروط الاستخدام</a>
+        <a href="#">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+const state = {
+  stages: [],
+  subjects: {},
+  examples: [],
+  page: 1,
+  perPage: 6
+};
+
+const stageSelect = document.getElementById('stageSelect');
+const termSelect = document.getElementById('termSelect');
+const subjectSelect = document.getElementById('subjectSelect');
+const examplesGrid = document.getElementById('examplesGrid');
+const prevPage = document.getElementById('prevPage');
+const nextPage = document.getElementById('nextPage');
+const pageInfo = document.getElementById('pageInfo');
+const examStage = document.getElementById('examStage');
+const examTerm = document.getElementById('examTerm');
+const examSubject = document.getElementById('examSubject');
+const examCount = document.getElementById('examCount');
+const startExam = document.getElementById('startExam');
+const examArea = document.getElementById('examArea');
+
+function init(){
+  loadDemo();
+  bindEvents();
+  renderFilters();
+  renderExamples();
+  renderExamSelectors();
+}
+
+function loadDemo(){
+  state.stages = demoData.stages;
+  state.terms = demoData.terms;
+  state.subjects = demoData.subjects;
+  state.examples = demoData.examples;
+}
+
+function bindEvents(){
+  stageSelect.addEventListener('change', onFilterChange);
+  termSelect.addEventListener('change', onFilterChange);
+  subjectSelect.addEventListener('change', onFilterChange);
+  prevPage.addEventListener('click', ()=>{ if(state.page>1){state.page--; renderExamples()} });
+  nextPage.addEventListener('click', ()=>{ state.page++; renderExamples() });
+
+  startExam.addEventListener('click', startExamHandler);
+}
+
+function renderFilters(){
+  state.stages.forEach(s=>{
+    const o = document.createElement('option'); o.value=s; o.textContent=s; stageSelect.appendChild(o);
+  });
+  state.terms.forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; termSelect.appendChild(o); });
+  populateSubjects(state.stages[0]);
+}
+
+function populateSubjects(stage){
+  subjectSelect.innerHTML='';
+  const arr = state.subjects[stage] || [];
+  arr.forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; subjectSelect.appendChild(o); });
+}
+
+function onFilterChange(){
+  const selectedStage = stageSelect.value;
+  populateSubjects(selectedStage);
+  state.page=1;
+  renderExamples();
+}
+
+function renderExamples(){
+  const stage = stageSelect.value || state.stages[0];
+  const term = termSelect.value || state.terms[0];
+  const subject = subjectSelect.value || (state.subjects[stage] ? state.subjects[stage][0] : null);
+  let items = state.examples.filter(e => e.stage===stage && e.subject===subject);
+  const total = items.length || 1;
+  const pages = Math.max(1, Math.ceil(total/state.perPage));
+  if(state.page>pages) state.page = pages;
+
+  const start = (state.page-1)*state.perPage;
+  const pageItems = items.slice(start, start+state.perPage);
+
+  examplesGrid.innerHTML = '';
+  pageItems.forEach(item=>{
+    const card = document.createElement('div'); card.className='card';
+    card.innerHTML = `
+      <img src="${item.img}" alt="مثال ${item.id}"/>
+      <div class="meta">
+        <div>
+          <strong>${item.subject}</strong>
+          <div class="small">${item.stage} — ${item.term}</div>
+        </div>
+        <button class="btn outline" onclick="viewExample('${item.img}')">عرض</button>
+      </div>
+    `;
+    examplesGrid.appendChild(card);
+  });
+
+  pageInfo.textContent = `${state.page} / ${pages}`;
+}
+
+function viewExample(img){
+  const win = window.open(img, '_blank');
+  if(!win) alert('افتح النافذة المنبثقة');
+}
+
+function renderExamSelectors(){
+  state.stages.forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; examStage.appendChild(o); });
+  state.terms.forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; examTerm.appendChild(o); });
+  const firstStage = state.stages[0];
+  (state.subjects[firstStage]||[]).forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; examSubject.appendChild(o); });
+}
+
+function startExamHandler(){
+  const stage = examStage.value;
+  const term = examTerm.value;
+  const subject = examSubject.value;
+  const count = parseInt(examCount.value,10) || 10;
+
+  examArea.classList.remove('hidden');
+  examArea.innerHTML = `<div class="exam-card"><h3>امتحان تجريبي — ${stage} / ${subject}</h3><p>عدد الأسئلة: ${count}</p><div class="exam-placeholder small">واجهة الامتحان ستُملأ بالأسئلة المحمّلة من JSON لاحقاً.</div></div>`;
+}
+
+init();
+</script>
+
+
+</body></html>
