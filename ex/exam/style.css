@@ -6,8 +6,6 @@
   --teal: teal;
   --glass: rgba(17,17,42,0.85);
 }
-
-/* Reset & base */
 *{box-sizing:border-box}
 body{
   font-family: 'Cairo', sans-serif;
@@ -31,8 +29,6 @@ body{
   animation: entrance .6s ease;
   border: 1px solid rgba(0,208,192,0.08);
 }
-
-/* header */
 .exam-header{
   display:flex;
   align-items:center;
@@ -41,13 +37,9 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.04);
   backdrop-filter: blur(6px);
 }
-.exam-header h1{ margin:0; color:var(--teal); font-size:1.15rem; text-shadow:0 0 8px rgba(0,208,192,0.2); }
+.exam-header h1{ margin:0; color:#62ffff; font-size:1.15rem; text-shadow:0 0 8px rgba(0,208,192,0.2); }
 .exam-header .meta{ font-size:0.85rem; color: #d7f7f0; opacity:0.9; }
-
-/* main */
 .exam-main{ padding:22px; min-height:380px; }
-
-/* loader */
 .loader{
   padding:40px;
   text-align:center;
@@ -55,15 +47,11 @@ body{
   color: #bfeee6;
   animation: pulse 1.6s infinite;
 }
-
-/* quiz area */
 .hidden{ display:none; }
 .quiz-area{ display:flex; flex-direction:column; gap:16px; }
-
 .progress-row{ display:flex; flex-direction:column; gap:8px; margin-bottom:6px; }
 .progress-bar{ height:10px; background: rgba(255,255,255,0.04); border-radius:999px; overflow:hidden; }
 .progress-fill{ width:0%; height:100%; background: linear-gradient(90deg,var(--teal), var(--accent)); transition: width .5s ease; }
-
 .question-card{
   background: var(--glass);
   border-radius:12px;
@@ -79,22 +67,19 @@ body{
 
 .q-title{ font-size:1.05rem; color:#e8fffb; font-weight:700; }
 .q-body{ font-size:0.98rem; color:#dff; line-height:1.5; }
-
-/* choices list */
 .choices{ display:flex; flex-direction:column; gap:10px; margin-top:10px; }
 .choice-btn{
   background: rgba(0,0,0,0.25);
   border-radius:10px;
   padding:12px;
+  text-align: center;
+  color: skyblue;
   cursor:pointer;
   border:1px solid rgba(255,255,255,0.03);
   transition: all .18s;
-  text-align:right;
 }
 .choice-btn:hover{ transform:translateY(-4px); box-shadow: 0 6px 18px rgba(0,208,192,0.08); }
 .choice-btn.selected{ background: linear-gradient(90deg,var(--teal), var(--accent)); color:#001; font-weight:700; }
-
-/* input styles */
 .input-fill{
   width:100%;
   padding:12px;
@@ -105,8 +90,6 @@ body{
   font-size:1rem;
 }
 .match-grid{ display:flex; gap:10px; flex-wrap:wrap; }
-
-/* controls */
 .controls{ display:flex; gap:12px; justify-content:flex-end; margin-top:8px; }
 button.primary{
   padding:10px 18px;
@@ -126,25 +109,17 @@ button.ghost{
   color:#fff;
   border-radius:8px;
 }
-
-/* result area */
 .result-area{ text-align:center; padding:20px; }
 .result-area h2{ color:var(--teal); margin-bottom:8px; }
 .result-area p{ color: #dff; }
-
 .retry-wrap{ margin:10px 0; }
-
-/* footer */
 .exam-footer{ padding:12px 20px; text-align:center; font-size:0.85rem; color:#bfeee6; background: linear-gradient(180deg, transparent, rgba(255,255,255,0.01)); }
-
-/* small screens */
 @media (max-width:768px){
   .exam-wrap{ padding:0; }
   .exam-main{ padding:16px; }
   .question-card{ min-height: 220px; }
 }
 
-/* animations */
 @keyframes pulse { 0%{ opacity:0.7 } 50%{ opacity:1 } 100%{ opacity:0.7 } }
 @keyframes entrance { from{ transform: translateY(10px); opacity:0 } to{ transform:none; opacity:1 } }
 @keyframes cardIn { from{ transform: translateY(8px) scale(.995); opacity:0 } to{ transform:none; opacity:1 } }
